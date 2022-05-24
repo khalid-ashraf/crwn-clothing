@@ -1,8 +1,10 @@
 import "./category-item.style.scss";
 
-const Categoryitem = ({ categories }) => {
-	return categories.map(({ id, title, imageUrl }) => (
-		<div key={id} className='category-container'>
+const Categoryitem = ({ category }) => {
+	const { imageUrl, title } = category;
+
+	return (
+		<div className='category-container'>
 			<div
 				className='background-image'
 				style={{
@@ -15,7 +17,7 @@ const Categoryitem = ({ categories }) => {
 				<p>Shop Now</p>
 			</div>
 		</div>
-	));
+	);
 };
 
 export default Categoryitem;
