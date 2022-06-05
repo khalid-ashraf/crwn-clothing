@@ -8,7 +8,7 @@ import {
 } from "../../utils/firebase/firebase";
 import SignupForm from "../../components/sign-up/sign-up.component";
 
-const SignIn = () => {
+const Authentication = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			const res = await getRedirectResult(auth);
@@ -37,4 +37,4 @@ const SignIn = () => {
 	);
 };
 
-export default SignIn;
+export default Authentication;
