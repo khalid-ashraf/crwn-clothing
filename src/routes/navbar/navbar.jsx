@@ -4,11 +4,16 @@ import { ReactComponent as CrownLogo } from "../../assets/crown.svg";
 import "./navbar.styles.scss";
 
 import { UserContext } from "../../components/contexts/user.context";
+import { CartContext } from "../../components/contexts/cart.context";
 
 import { signOutUser } from "../../utils/firebase/firebase";
 
+import CartIcon from "../../components/cart-icon/cart-icon";
+import CartDropdown from "../../components/cart-dropdown/cart-dropdown";
+
 const NavBar = () => {
 	const { currentUser } = useContext(UserContext);
+	const { isCartOpen } = useContext(CartContext);
 
 	return (
 		<>
@@ -29,6 +34,10 @@ const NavBar = () => {
 							SIGN IN
 						</Link>
 					)}
+					<div>
+						<CartIcon />
+					</div>
+					{isCartOpen && <CartDropdown />}
 				</div>
 			</div>
 			<Outlet />
