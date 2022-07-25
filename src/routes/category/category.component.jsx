@@ -4,7 +4,8 @@ import { useParams } from "react-router-dom";
 import { CategoriesContext } from "../../components/contexts/categories.context";
 import ProductCard from "../../components/product-card/product-card";
 
-import "./category.styles.scss";
+import "./category.styles.jsx";
+import { CategoryContainer, CategoryTitle } from "./category.styles.jsx";
 
 const Category = () => {
 	const { category } = useParams();
@@ -17,13 +18,13 @@ const Category = () => {
 
 	return (
 		<>
-			<h2 className='category-title'>{category.toUpperCase()}</h2>
-			<div className='category-container'>
+			<CategoryTitle>{category.toUpperCase()}</CategoryTitle>
+			<CategoryContainer>
 				{products &&
 					products.map((product) => (
 						<ProductCard key={product.id} product={product} />
 					))}
-			</div>
+			</CategoryContainer>
 		</>
 	);
 };
