@@ -22,7 +22,6 @@ const CartDropdown = () => {
 		navigate("/checkout");
 		setIsCartOpen(false);
 	};
-	//cafdaf
 	return (
 		<CartDropdownContainer>
 			<CartItems>
