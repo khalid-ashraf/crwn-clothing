@@ -14,13 +14,13 @@ import {
 import { CartContext } from "../contexts/cart.context";
 
 const CartDropdown = () => {
-	const { cartItems, setisCartOpen } = useContext(CartContext);
+	const { cartItems, setIsCartOpen } = useContext(CartContext);
 
 	const navigate = useNavigate();
 
 	const gotoCheckoutHandler = () => {
 		navigate("/checkout");
-		setisCartOpen(false);
+		setIsCartOpen(false);
 	};
 
 	return (

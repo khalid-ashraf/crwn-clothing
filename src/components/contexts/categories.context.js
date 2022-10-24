@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from "react";
 
 import { getCategoriesAndDocuments } from "../../utils/firebase/firebase.js";
 
-export const CategoriesContext = createContext();
+export const CategoriesContext = createContext({ categoriesMap: {} });
 
 export const CategoriesProvider = ({ children }) => {
 	const [categoriesMap, setCategoriesMap] = useState({});

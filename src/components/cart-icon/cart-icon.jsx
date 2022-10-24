@@ -9,12 +9,12 @@ import {
 import { CartContext } from "../contexts/cart.context";
 
 const CartIcon = () => {
-	const { isCartOpen, setisCartOpen, cartCount } = useContext(CartContext);
+	const { isCartOpen, setIsCartOpen, cartCount } = useContext(CartContext);
 
 	return (
 		<CartIconContainer
 			onClick={() => {
-				setisCartOpen(!isCartOpen);
+				setIsCartOpen(!isCartOpen);
 			}}>
 			<ShoppingIcon />
 			<ItemCount>{cartCount}</ItemCount>
