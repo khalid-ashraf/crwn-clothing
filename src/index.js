@@ -12,7 +12,6 @@ import "./index.scss";
 import App from "./App";
 
 //Context Imports
-import { CategoriesProvider } from "./components/contexts/categories.context";
 import { CartContextProvider } from "./components/contexts/cart.context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -21,11 +20,9 @@ root.render(
 		{/* The Provider below is to wrap around the app component so that redux state and store is available to App and all children components. We need to pass our redux store that we built as prop to the provider */}
 		<Provider store={store}>
 			<BrowserRouter>
-				<CategoriesProvider>
-					<CartContextProvider>
-						<App />
-					</CartContextProvider>
-				</CategoriesProvider>
+				<CartContextProvider>
+					<App />
+				</CartContextProvider>
 			</BrowserRouter>
 		</Provider>
 	</React.StrictMode>

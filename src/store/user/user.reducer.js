@@ -4,7 +4,7 @@ const INITIAL_STATE = {
 	currentUser: null,
 };
 
-//This sets Initial State and then takes in the action. Action is passed from the user.action.js file. As we saw, action.js file has an action type and payload. Payload contains what the currentUser value is
+//This sets Initial State and then takes in the action. Action is passed from the action.js file. As we saw, action.js file has an action type and payload. Payload contains what the currentUser value is
 export const userReducer = (state = INITIAL_STATE, action) => {
 	const { type, payload } = action;
 
